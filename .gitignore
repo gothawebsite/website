@@ -1,0 +1,9 @@
+# Media
+*.mp4
+*.mov
+*.avi
+
+# OS & Logs
+.DS_Store
+Thumbs.db
+*.log
