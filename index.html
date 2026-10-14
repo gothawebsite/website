@@ -151,126 +151,29 @@
       50% { transform: scale(1.4); opacity: 1; filter: brightness(1.3); }
     }
 
-    .header-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 18px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 100px;
-      backdrop-filter: blur(16px);
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--cream);
-    }
-
-    .pulse-beacon {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 10px #10b981;
-      animation: blinkBeacon 1.8s infinite ease-in-out;
-    }
-
-    @keyframes blinkBeacon {
-      0%, 100% { opacity: 0.4; transform: scale(0.9); }
-      50% { opacity: 1; transform: scale(1.3); }
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .btn-glass {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 10px 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      color: var(--cream);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      cursor: pointer;
-      backdrop-filter: blur(12px);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .btn-glass:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    .btn-glass svg {
-      width: 15px;
-      height: 15px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
     /* Main Content Stage */
     main.hero-stage {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-align: center;
       max-width: 960px;
-      margin: clamp(24px, 4vh, 48px) auto;
+      margin: auto;
       width: 100%;
-    }
-
-    /* Badge */
-    .kicker-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 22px;
-      background: linear-gradient(135deg, rgba(255, 77, 46, 0.15), rgba(255, 140, 66, 0.06));
-      border: 1px solid rgba(255, 77, 46, 0.35);
-      border-radius: 100px;
-      backdrop-filter: blur(20px);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #ff9179;
-      margin-bottom: clamp(16px, 2.5vh, 26px);
-      box-shadow: 0 0 35px rgba(255, 77, 46, 0.15);
-      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
-    }
-
-    .kicker-badge svg {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
+      padding-block: clamp(24px, 4vh, 48px);
     }
 
     /* Headline */
     h1.hero-title {
-      font-size: clamp(38px, 6.4vw, 84px);
+      font-size: clamp(42px, 6.8vw, 88px);
       font-weight: 900;
       line-height: 1.02;
       letter-spacing: -0.04em;
       color: #fff;
       text-transform: uppercase;
-      margin-bottom: clamp(14px, 2vh, 22px);
-      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+      margin-bottom: clamp(36px, 5.5vh, 64px);
+      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
     }
 
     .hero-title .gradient-text {
@@ -281,22 +184,12 @@
       text-shadow: 0 10px 40px rgba(255, 77, 46, 0.3);
     }
 
-    p.hero-subtitle {
-      font-size: clamp(15px, 1.8vw, 19px);
-      font-weight: 400;
-      line-height: 1.55;
-      color: rgba(255, 255, 255, 0.75);
-      max-width: 660px;
-      margin: 0 auto clamp(30px, 4.5vh, 48px);
-      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
-    }
-
     /* Countdown Grid */
     .countdown-wrapper {
       width: 100%;
       max-width: 860px;
-      margin-bottom: clamp(28px, 4.5vh, 44px);
-      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+      margin-bottom: 0;
+      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
     }
 
     .countdown-grid {
@@ -415,101 +308,6 @@
       text-transform: uppercase;
     }
 
-    /* Form & Action Section */
-    .action-section {
-      width: 100%;
-      max-width: 580px;
-      margin: 0 auto;
-      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
-    }
-
-    form.notify-form {
-      display: flex;
-      align-items: center;
-      background: rgba(18, 22, 30, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 16px;
-      padding: 6px 6px 6px 18px;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s ease;
-    }
-
-    form.notify-form:focus-within {
-      border-color: var(--accent);
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 77, 46, 0.3);
-    }
-
-    form.notify-form input[type="email"] {
-      flex: 1;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: #fff;
-      font-family: var(--font-main);
-      font-size: 15px;
-      font-weight: 500;
-    }
-
-    form.notify-form input[type="email"]::placeholder {
-      color: rgba(255, 255, 255, 0.45);
-    }
-
-    form.notify-form button[type="submit"] {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, var(--accent) 0%, #e0381a 100%);
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      padding: 13px 24px;
-      font-family: var(--font-main);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-      box-shadow: 0 6px 20px rgba(255, 77, 46, 0.35);
-    }
-
-    form.notify-form button[type="submit"]:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 26px rgba(255, 77, 46, 0.55);
-      filter: brightness(1.1);
-    }
-
-    form.notify-form button[type="submit"]:active {
-      transform: translateY(0);
-    }
-
-    .form-success-message {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      color: #34d399;
-      border-radius: 16px;
-      padding: 16px 24px;
-      font-size: 14.5px;
-      font-weight: 600;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      animation: fadeIn 0.4s ease both;
-    }
-
-    .form-success-message svg {
-      width: 18px;
-      height: 18px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2.5;
-    }
-
     /* Footer */
     footer.site-footer {
       display: flex;
@@ -590,32 +388,10 @@
         letter-spacing: 0.16em;
       }
 
-      form.notify-form {
-        flex-direction: column;
-        padding: 10px;
-        border-radius: 16px;
-      }
-
-      form.notify-form input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-      }
-
-      form.notify-form button[type="submit"] {
-        width: 100%;
-        justify-content: center;
-        padding: 14px;
-      }
-
       footer.site-footer {
         flex-direction: column;
         text-align: center;
         gap: 8px;
-      }
-
-      .header-status {
-        display: none;
       }
     }
 
@@ -645,36 +421,14 @@
       <a href="#" class="brand" aria-label="GOTHA Home">
         GOTHA<span class="brand-dot"></span>
       </a>
-
-      <div class="header-status">
-        <span class="pulse-beacon"></span>
-        <span>COUNTDOWN ACTIVE · 30 DAYS REMAINING</span>
-      </div>
-
-      <div class="header-actions">
-        <button class="btn-glass" id="cal-btn" type="button" aria-label="Add launch event to calendar">
-          <svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" /></svg>
-          <span>Save Date</span>
-        </button>
-      </div>
     </header>
 
     <!-- Main Stage -->
     <main class="hero-stage">
-      <div class="kicker-badge">
-        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
-        <span>OFFICIAL REVEAL · 30 DAYS TO GO</span>
-      </div>
-
       <h1 class="hero-title">
         SOMETHING REVOLUTIONARY<br>
         <span class="gradient-text">IS COMING.</span>
       </h1>
-
-      <p class="hero-subtitle">
-        We're engineering the next era of logistics and supply chain intelligence.
-        The reveal begins in 30 days. Be the first to witness the arrival.
-      </p>
 
       <!-- 30-Day Countdown Cards -->
       <div class="countdown-wrapper" role="timer" aria-label="30 days countdown until launch">
@@ -709,21 +463,6 @@
           <span>ORIGIN: INITIATION</span>
           <span id="meta-remaining">30 DAYS REMAINING</span>
           <span>TARGET: 14 NOV 2026</span>
-        </div>
-      </div>
-
-      <!-- Action Section: VIP Early Access Form -->
-      <div class="action-section">
-        <form class="notify-form" id="notify-form" novalidate>
-          <input type="email" id="email-input" placeholder="Enter your email for VIP launch access..." required autocomplete="email" aria-label="Your email address">
-          <button type="submit">
-            <span>Notify Me</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
-        <div class="form-success-message" id="form-success">
-          <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>You're on the priority list. We'll alert you the instant we go live.</span>
         </div>
       </div>
     </main>
@@ -782,70 +521,6 @@
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
-
-    // Calendar .ics download
-    function createCalendarEvent(target) {
-      const stamp = (date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-      const start = stamp(target);
-      const end = stamp(new Date(target.getTime() + 60 * 60 * 1000));
-
-      return [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//GOTHA//Launch Reminder//EN',
-        'CALSCALE:GREGORIAN',
-        'BEGIN:VEVENT',
-        'UID:gotha-launch-20261114@gotha',
-        `DTSTAMP:${start}`,
-        `DTSTART:${start}`,
-        `DTEND:${end}`,
-        'SUMMARY:GOTHA Official Launch',
-        'DESCRIPTION:The wait is over. Experience the reveal of GOTHA.',
-        'STATUS:CONFIRMED',
-        'END:VEVENT',
-        'END:VCALENDAR',
-        ''
-      ].join('\r\n');
-    }
-
-    const calBtn = document.getElementById('cal-btn');
-    if (calBtn) {
-      calBtn.addEventListener('click', () => {
-        const icsData = createCalendarEvent(launchTarget);
-        const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'gotha-launch-reminder.ics';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-      });
-    }
-
-    // Email notification form submission
-    const notifyForm = document.getElementById('notify-form');
-    const formSuccess = document.getElementById('form-success');
-    const emailInput = document.getElementById('email-input');
-
-    if (notifyForm) {
-      notifyForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = emailInput.value.trim();
-        if (email && email.includes('@')) {
-          localStorage.setItem('gotha_vip_subscriber', email);
-          notifyForm.style.display = 'none';
-          formSuccess.style.display = 'inline-flex';
-        }
-      });
-    }
-
-    // Check if user already subscribed
-    if (localStorage.getItem('gotha_vip_subscriber')) {
-      if (notifyForm) notifyForm.style.display = 'none';
-      if (formSuccess) formSuccess.style.display = 'inline-flex';
-    }
 
     // Floating Dust & Ember Canvas Animation
     const canvas = document.getElementById('particle-canvas');
